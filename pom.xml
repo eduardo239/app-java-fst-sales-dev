@@ -51,6 +51,7 @@
             <scope>runtime</scope>
         </dependency>
 
+		<!-- DevTools (optional) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>

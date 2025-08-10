@@ -1,15 +1,8 @@
-mvn clean package -DskipTests
-java -jar target/proj-10-0.0.1-SNAPSHOT.jar
 
-# com --type
-az webapp deploy \
-  --resource-group rg-java-runner \
-  --name java-runner-app \
-  --src-path target/proj-10-0.0.1-SNAPSHOT.jar \
-  --type jar
+Para execut  o projeto, basta executar o comando:
 
-# sem o --type
-az webapp deploy \
-  --resource-group rg-java-runner \
-  --name java-runner-app \
-  --src-path target/proj-10-0.0.1-SNAPSHOT.jar
+`./mvnw clean package -DskipTests`
+
+E em seguida:
+
+`java -jar target/proj-10-0.0.1-SNAPSHOT.jar`

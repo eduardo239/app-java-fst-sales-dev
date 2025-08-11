@@ -5,14 +5,14 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import io.eduardo.proj_10.entity.Category;
-import io.eduardo.proj_10.repository.CateroyRepository;
+import io.eduardo.proj_10.repository.CategoryRepository;
 
 @Service
 public class CategoryService {
 
-    private final CateroyRepository repository;
+    private final CategoryRepository repository;
 
-    public CategoryService(CateroyRepository repository) {
+    public CategoryService(CategoryRepository repository) {
         this.repository = repository;
     }
 

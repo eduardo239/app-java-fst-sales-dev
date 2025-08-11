@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import io.eduardo.proj_10.entity.Category;
 import io.eduardo.proj_10.entity.Product;
 import io.eduardo.proj_10.repository.ProductRepository;
 
@@ -40,5 +41,10 @@ public class ProductService {
 
     public void deleteProduct(Long id) {
         repository.deleteById(id);
+    }
+
+    // find all products by category
+    public List<Product> findByCategory(Category category) {
+        return repository.findByCategory(category);
     }
 }

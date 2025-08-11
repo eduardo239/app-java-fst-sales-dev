@@ -55,7 +55,7 @@ public class ProductController {
         return ResponseEntity.noContent().build();
     }
 
-    // find products by category
+    // find all products by category id
     @GetMapping("/category/{categoryId}")
     public List<Product> getProductsByCategory(@PathVariable Long categoryId) {
         Category category = categoryService.getCategoryById(categoryId);

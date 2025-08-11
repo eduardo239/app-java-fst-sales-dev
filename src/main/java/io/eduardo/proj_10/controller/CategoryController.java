@@ -2,6 +2,7 @@ package io.eduardo.proj_10.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,37 +20,34 @@ import io.eduardo.proj_10.service.CategoryService;
 @RequestMapping("/categories")
 public class CategoryController {
 
-    private final CategoryService service;
-
-    public CategoryController(CategoryService service) {
-        this.service = service;
-    }
+    @Autowired
+    private CategoryService categoryService;
 
     @GetMapping
     public List<Category> getAllCategories() {
-        return service.getAllCategories();
+        return categoryService.getAllCategories();
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Category> getProductById(@PathVariable Long id) {
-        Category category = service.getCategoryById(id);
+        Category category = categoryService.getCategoryById(id);
         return category != null ? ResponseEntity.ok(category) : ResponseEntity.notFound().build();
     }
 
     @PostMapping
     public Category createProduct(@RequestBody Category category) {
-        return service.createCategory(category);
+        return categoryService.createCategory(category);
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<Category> updateProduct(@PathVariable Long id, @RequestBody Category category) {
-        Category updated = service.updateCategory(id, category);
+        Category updated = categoryService.updateCategory(id, category);
         return updated != null ? ResponseEntity.ok(updated) : ResponseEntity.notFound().build();
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteProduct(@PathVariable Long id) {
-        service.deleteCategory(id);
+        categoryService.deleteCategory(id);
         return ResponseEntity.noContent().build();
     }
 }

@@ -1,0 +1,55 @@
+package io.eduardo.proj_10.controller;
+
+import java.util.List;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import io.eduardo.proj_10.entity.Category;
+import io.eduardo.proj_10.service.CategoryService;
+
+@RestController
+@RequestMapping("/categories")
+public class CategoryController {
+
+    private final CategoryService service;
+
+    public CategoryController(CategoryService service) {
+        this.service = service;
+    }
+
+    @GetMapping
+    public List<Category> getAllCategories() {
+        return service.getAllCategories();
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Category> getProductById(@PathVariable Long id) {
+        Category category = service.getCategoryById(id);
+        return category != null ? ResponseEntity.ok(category) : ResponseEntity.notFound().build();
+    }
+
+    @PostMapping
+    public Category createProduct(@RequestBody Category category) {
+        return service.createCategory(category);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Category> updateProduct(@PathVariable Long id, @RequestBody Category category) {
+        Category updated = service.updateCategory(id, category);
+        return updated != null ? ResponseEntity.ok(updated) : ResponseEntity.notFound().build();
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteProduct(@PathVariable Long id) {
+        service.deleteCategory(id);
+        return ResponseEntity.noContent().build();
+    }
+}

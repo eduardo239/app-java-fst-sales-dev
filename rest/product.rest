@@ -24,8 +24,8 @@ PUT http://localhost:8080/products/2 HTTP/1.1
 content-type: application/json
 
 {
-    "name": "category-de",
-    "price": 399.99,
+    "name": "product-2",
+    "price": 45.99,
     "category": {
         "id": 2,
         "name": "category-2-updated"
@@ -34,4 +34,4 @@ content-type: application/json
 
 ###
 
-DELETE http://localhost:8080/products/3 HTTP/1.1
+DELETE http://localhost:8080/products/4 HTTP/1.1

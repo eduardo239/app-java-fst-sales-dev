@@ -1,0 +1,27 @@
+GET http://localhost:8080/categories HTTP/1.1
+
+###
+
+GET http://localhost:8080/categories/1 HTTP/1.1
+
+###
+
+POST http://localhost:8080/categories HTTP/1.1
+content-type: application/json
+
+{
+    "name": "category-de"
+}
+
+###
+
+PUT http://localhost:8080/categories/2 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "category-2-updated"
+}
+
+###
+
+DELETE http://localhost:8080/categories/4 HTTP/1.1

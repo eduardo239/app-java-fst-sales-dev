@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>io.eduardo</groupId>
-	<artifactId>proj-10</artifactId>
+	<artifactId>FSTSales</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>proj-10</name>
+	<name>FSTSales</name>
 	<description>Teste de projeto com java e terraform Azure</description>
 	<url/>
 	<licenses>

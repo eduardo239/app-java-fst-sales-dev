@@ -1,0 +1,37 @@
+GET http://localhost:8080/products HTTP/1.1
+
+###
+
+GET http://localhost:8080/products/1 HTTP/1.1
+
+###
+
+POST http://localhost:8080/products HTTP/1.1
+content-type: application/json
+
+{
+    "name": "category-de",
+    "price": 399.99,
+    "category": {
+        "id": 1,
+        "name": "category-1"
+    }
+}
+
+###
+
+PUT http://localhost:8080/products/2 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "category-de",
+    "price": 399.99,
+    "category": {
+        "id": 2,
+        "name": "category-2-updated"
+    }
+}
+
+###
+
+DELETE http://localhost:8080/products/3 HTTP/1.1

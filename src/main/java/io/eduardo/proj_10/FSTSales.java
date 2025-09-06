@@ -4,11 +4,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Proj10Application {
+public class FSTSales {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Proj10Application.class, args);
-		System.out.println("Proj10Application is running!");
+		SpringApplication.run(FSTSales.class, args);
+		System.out.println("FSTSales is running!");
 	}
 
 }

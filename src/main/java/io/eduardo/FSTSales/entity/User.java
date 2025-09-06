@@ -1,4 +1,4 @@
-package io.eduardo.proj_10.entity;
+package io.eduardo.FSTSales.entity;
 
 import java.time.LocalDateTime;
 

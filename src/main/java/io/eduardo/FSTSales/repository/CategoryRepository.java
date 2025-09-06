@@ -1,8 +1,8 @@
-package io.eduardo.proj_10.repository;
+package io.eduardo.FSTSales.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import io.eduardo.proj_10.entity.Category;
+import io.eduardo.FSTSales.entity.Category;
 
 public interface CategoryRepository extends JpaRepository<Category, Long> {
 

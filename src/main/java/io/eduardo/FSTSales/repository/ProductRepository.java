@@ -1,11 +1,11 @@
-package io.eduardo.proj_10.repository;
+package io.eduardo.FSTSales.repository;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import io.eduardo.proj_10.entity.Category;
-import io.eduardo.proj_10.entity.Product;
+import io.eduardo.FSTSales.entity.Category;
+import io.eduardo.FSTSales.entity.Product;
 
 public interface ProductRepository extends JpaRepository<Product, Long> {
 

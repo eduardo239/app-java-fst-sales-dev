@@ -1,7 +1,9 @@
-package io.eduardo.proj_10;
+package io.eduardo.FSTSales;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
 
 @SpringBootApplication
 public class FSTSales {

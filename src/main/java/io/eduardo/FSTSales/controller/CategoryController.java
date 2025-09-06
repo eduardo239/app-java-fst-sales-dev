@@ -1,4 +1,4 @@
-package io.eduardo.proj_10.controller;
+package io.eduardo.FSTSales.controller;
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.eduardo.proj_10.entity.Category;
-import io.eduardo.proj_10.service.CategoryService;
+import io.eduardo.FSTSales.entity.Category;
+import io.eduardo.FSTSales.service.CategoryService;
 
 @RestController
 @RequestMapping("/categories")

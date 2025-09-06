@@ -1,9 +1,9 @@
-package io.eduardo.proj_10.service;
+package io.eduardo.FSTSales.service;
 
 import java.util.List;
 
-import io.eduardo.proj_10.entity.User;
-import io.eduardo.proj_10.repository.UserRepository;
+import io.eduardo.FSTSales.entity.User;
+import io.eduardo.FSTSales.repository.UserRepository;
 
 public class UserService {
     private final UserRepository repository;

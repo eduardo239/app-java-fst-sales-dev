@@ -1,11 +1,11 @@
-package io.eduardo.proj_10.service;
+package io.eduardo.FSTSales.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import io.eduardo.proj_10.entity.Category;
-import io.eduardo.proj_10.repository.CategoryRepository;
+import io.eduardo.FSTSales.entity.Category;
+import io.eduardo.FSTSales.repository.CategoryRepository;
 
 @Service
 public class CategoryService {

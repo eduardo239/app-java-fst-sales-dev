@@ -1,12 +1,12 @@
-package io.eduardo.proj_10.service;
+package io.eduardo.FSTSales.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import io.eduardo.proj_10.entity.Category;
-import io.eduardo.proj_10.entity.Product;
-import io.eduardo.proj_10.repository.ProductRepository;
+import io.eduardo.FSTSales.entity.Category;
+import io.eduardo.FSTSales.entity.Product;
+import io.eduardo.FSTSales.repository.ProductRepository;
 
 @Service
 public class ProductService {
